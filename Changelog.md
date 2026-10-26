@@ -12,6 +12,9 @@ changelog
 pylintrc
 gitignore
 mkdocs initialization
+automated mkdocs deploy
+automated tests
+automated library deploy
 
 ### Changed
 
