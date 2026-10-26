@@ -8,7 +8,7 @@ def main():
     if (not isinstance(env, gym.Env)):
         raise f"It was not possible to get enviroment {env}"
 
-    agent = Sarsa(
+    agent = QLearning(
         env=env,
         alpha=0.1,
         gamma=0.99,
