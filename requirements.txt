@@ -1,0 +1,16 @@
+pytest
+twine
+mkdocs
+mkdocs-material
+mkdocs-static-i18n
+numpy
+pylint
+setuptools
+mkdocs-jupyter
+mkdocs-git-revision-date-localized-plugin
+markdown
+pymdown-extensions
+pretty_html_table
+matplotlib
+PyQt6
+gymnasium
