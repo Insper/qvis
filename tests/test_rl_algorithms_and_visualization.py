@@ -147,11 +147,12 @@ def test_visualizer_timelapse_validates_inputs():
 
 
 def test_visualizer_timelapse_creates_animation_and_stores_reference():
-    agent = _trained_agent(QLearning, episodes=5, snapshot_interval=1)
+    agent = _trained_agent(Sarsa, episodes=5, snapshot_interval=1)
     visualizer = RLVisualizer(agent)
 
     fig, animation = visualizer.timelapse(interval=5, reward_window=2)
 
+    assert "SARSA" in fig._suptitle.get_text()
     assert animation is visualizer.animation
     assert animation is not None
     assert len(fig.axes) >= 2

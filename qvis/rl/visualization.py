@@ -145,7 +145,11 @@ class RLVisualizer:
             gridspec_kw={"width_ratios": [1, 1.4]},
         )
 
-        fig.suptitle("Q-Learning Training Progress")
+        algorithm = type(self.agent).__name__
+        algorithm = {"QLearning": "Q-Learning", "Sarsa": "SARSA"}.get(
+            algorithm, algorithm
+        )
+        fig.suptitle(f"{algorithm} Training Progress")
 
         # ---- Q-table heatmap ----
 
