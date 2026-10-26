@@ -15,6 +15,7 @@ mkdocs initialization
 automated mkdocs deploy
 automated tests
 automated library deploy
+added rl first implementations (Sarsa, Qlearning and visualization feature)
 
 ### Changed
 
