@@ -1,14 +1,14 @@
 import gymnasium as gym
-from qvis.rl import QLearning, RLVisualizer
+from qvis.rl import QLearning, RLVisualizer, Sarsa
 from matplotlib import pyplot as plt
 
 def main():
-    env = gym.make("FrozenLake-v1", 1000, is_slippery=False)
+    env = gym.make("FrozenLake-v1", is_slippery=True)
 
     if (not isinstance(env, gym.Env)):
         raise f"It was not possible to get enviroment {env}"
 
-    agent = QLearning(
+    agent = Sarsa(
         env=env,
         alpha=0.1,
         gamma=0.99,
